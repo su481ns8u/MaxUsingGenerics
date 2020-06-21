@@ -21,4 +21,12 @@ public class MaxFinderTest {
         Integer max = maxFinder.findMax();
         Assert.assertEquals(intArray[1], max);
     }
+
+    @Test
+    public void findMaxForInteger_ShouldPass_IfMaxGivenAtThirdPosition() {
+        Integer[] intArray = {8, 5, 10};
+        maxFinder = new MaxFinder(intArray);
+        Integer max = maxFinder.findMax();
+        Assert.assertEquals(intArray[2], max);
+    }
 }

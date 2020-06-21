@@ -3,79 +3,28 @@ package com.su481ns8u.maximum.services;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class MaxFinderTest {
-    MaxFinder maxFinder;
-
+public class MaxFinderTest<E extends Comparable> {
     @Test
-    public void findMaxForInteger_ShouldPass_IfMaxGivenAtFirstPosition() {
+    public <E extends Comparable> void findMaxForInteger_ShouldPass_IfMaxGivenAtFirstPosition() {
         Integer[] intArray = {10, 8, 5};
-        maxFinder = new MaxFinder(intArray);
-        Integer max = maxFinder.findMaxInt();
-        Assert.assertEquals(intArray[0], max);
+        MaxFinder maxFinderInt = new MaxFinder(intArray);
+        E maxInt = (E) maxFinderInt.findMax();
+        Assert.assertEquals(intArray[0], maxInt);
     }
 
     @Test
-    public void findMaxForInteger_ShouldPass_IfMaxGivenAtSecondPosition() {
-        Integer[] intArray = {8, 10, 5};
-        maxFinder = new MaxFinder(intArray);
-        Integer max = maxFinder.findMaxInt();
-        Assert.assertEquals(intArray[1], max);
+    public <E extends Comparable> void findMaxForFloat_ShouldPass_IfMaxGivenAtFirstPosition() {
+        Float[] floatArray = {5.2f, 8.3f, 9.1f};
+        MaxFinder maxFinderFloat = new MaxFinder(floatArray);
+        E maxFloat = (E) maxFinderFloat.findMax();
+        Assert.assertEquals(floatArray[2], maxFloat);
     }
 
     @Test
-    public void findMaxForInteger_ShouldPass_IfMaxGivenAtThirdPosition() {
-        Integer[] intArray = {8, 5, 10};
-        maxFinder = new MaxFinder(intArray);
-        Integer max = maxFinder.findMaxInt();
-        Assert.assertEquals(intArray[2], max);
-    }
-
-    @Test
-    public void findMaxForFloat_ShouldPass_IfMaxGivenAtFirstPosition() {
-        Float[] floatArray = {10.3f, 8.5f, 5.1f};
-        maxFinder = new MaxFinder(floatArray);
-        Float max = maxFinder.findMaxFloat();
-        Assert.assertEquals(floatArray[0], max);
-    }
-
-    @Test
-    public void findMaxForFloat_ShouldPass_IfMaxGivenAtSecondPosition() {
-        Float[] floatArray = {10.3f, 15.5f, 5.1f};
-        maxFinder = new MaxFinder(floatArray);
-        Float max = maxFinder.findMaxFloat();
-        Assert.assertEquals(floatArray[1], max);
-    }
-
-    @Test
-    public void findMaxForFloat_ShouldPass_IfMaxGivenAtThirdPosition() {
-        Float[] floatArray = {10.3f, 15.5f, 52.1f};
-        maxFinder = new MaxFinder(floatArray);
-        Float max = maxFinder.findMaxFloat();
-        Assert.assertEquals(floatArray[2], max);
-    }
-
-    @Test
-    public void findMaxForString_ShouldPass_IfMaxGivenAtFirstPosition() {
-        String[] stringArray = {"ShantnuNaik", "SandeepGhi", "SadhanaJoshi"};
-        maxFinder = new MaxFinder(stringArray);
-        String max = maxFinder.findMaxString();
-        System.out.println(max);
-        Assert.assertEquals(stringArray[0], max);
-    }
-
-    @Test
-    public void findMaxForString_ShouldPass_IfMaxGivenAtSecondPosition() {
-        String[] stringArray = {"SandeepGhi", "ShantnuNaik", "SadhanaJoshi"};
-        maxFinder = new MaxFinder(stringArray);
-        String max = maxFinder.findMaxString();
-        Assert.assertEquals(stringArray[1], max);
-    }
-
-    @Test
-    public void findMaxForString_ShouldPass_IfMaxGivenAtThirdPosition() {
-        String[] stringArray = {"SandeepGhi", "SadhanaJoshi", "ShantnuNaik"};
-        maxFinder = new MaxFinder(stringArray);
-        String max = maxFinder.findMaxString();
-        Assert.assertEquals(stringArray[2], max);
+    public <E extends Comparable> void findMaxForString_ShouldPass_IfMaxGivenAtFirstPosition() {
+        String[] stringArray = {"Sudhanshu", "Snehal", "Shashank"};
+        MaxFinder maxFinderString = new MaxFinder(stringArray);
+        E maxString = (E) maxFinderString.findMax();
+        Assert.assertEquals(stringArray[0], maxString);
     }
 }

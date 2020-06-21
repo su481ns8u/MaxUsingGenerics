@@ -45,4 +45,12 @@ public class MaxFinderTest {
         Float max = maxFinder.findMaxFloat();
         Assert.assertEquals(floatArray[1], max);
     }
+
+    @Test
+    public void findMaxForFloat_ShouldPass_IfMaxGivenAtThirdPosition() {
+        Float[] floatArray = {10.3f, 15.5f, 52.1f};
+        maxFinder = new MaxFinder(floatArray);
+        Float max = maxFinder.findMaxFloat();
+        Assert.assertEquals(floatArray[2], max);
+    }
 }

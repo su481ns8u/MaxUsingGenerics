@@ -1,5 +1,7 @@
 package com.su481ns8u.maximum.services;
 
+import java.util.Arrays;
+
 public class MaxFinder<E extends Comparable> {
     E[] array;
 
@@ -8,10 +10,8 @@ public class MaxFinder<E extends Comparable> {
     }
 
     public E findMax() {
-        E max = array[0];
-        for (E i : array)
-            if (i.compareTo(max) > 0)
-                max = i;
+        Arrays.sort(array);
+        E max = array[array.length - 1];
         return max;
     }
 }

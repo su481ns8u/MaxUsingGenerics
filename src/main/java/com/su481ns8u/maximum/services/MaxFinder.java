@@ -3,6 +3,7 @@ package com.su481ns8u.maximum.services;
 public class MaxFinder {
     Integer[] intArray;
     Float[] floatArray;
+    String[] stringArray;
 
     public MaxFinder(Integer[] intArray) {
         this.intArray = intArray;
@@ -10,6 +11,10 @@ public class MaxFinder {
 
     public MaxFinder(Float[] floatArray){
         this.floatArray = floatArray;
+    }
+
+    public MaxFinder(String[] stringArray){
+        this.stringArray = stringArray;
     }
 
     public Integer findMaxInt() {
@@ -23,6 +28,14 @@ public class MaxFinder {
     public Float findMaxFloat() {
         Float max = floatArray[0];
         for (Float i : floatArray)
+            if (i.compareTo(max) > 0)
+                max = i;
+        return max;
+    }
+
+    public String findMaxString() {
+        String max = stringArray[0];
+        for (String i : stringArray)
             if (i.compareTo(max) > 0)
                 max = i;
         return max;

@@ -53,4 +53,12 @@ public class MaxFinderTest {
         Float max = maxFinder.findMaxFloat();
         Assert.assertEquals(floatArray[2], max);
     }
+
+    @Test
+    public void findMaxForString_ShouldPass_IfMaxGivenAtFirstPosition() {
+        String[] stringArray = {"ShantnuNaik", "SandeepGhi", "SadhanaJoshi"};
+        maxFinder = new MaxFinder(stringArray);
+        String max = maxFinder.findMaxString();
+        Assert.assertEquals(stringArray[0], max);
+    }
 }

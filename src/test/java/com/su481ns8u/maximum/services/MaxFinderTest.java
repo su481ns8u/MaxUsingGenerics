@@ -10,9 +10,15 @@ public class MaxFinderTest {
     public void findMaxForInteger_ShouldPass_IfMaxGivenAtFirstPosition() {
         Integer[] intArray = {10, 8, 5};
         maxFinder = new MaxFinder(intArray);
-        int max = maxFinder.findMax();
-        Assert.assertEquals(10, max);
+        Integer max = maxFinder.findMax();
+        Assert.assertEquals(intArray[0], max);
     }
 
-
+    @Test
+    public void findMaxForInteger_ShouldPass_IfMaxGivenAtSecondPosition() {
+        Integer[] intArray = {8, 10, 5};
+        maxFinder = new MaxFinder(intArray);
+        Integer max = maxFinder.findMax();
+        Assert.assertEquals(intArray[1], max);
+    }
 }

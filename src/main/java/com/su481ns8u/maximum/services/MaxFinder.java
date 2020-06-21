@@ -8,7 +8,7 @@ public class MaxFinder {
     }
 
     public int findMax() {
-        Integer max = intArray[0];
+        int max = intArray[0];
         for (Integer i : intArray)
             if (i.compareTo(max) > 0)
                 max = i;

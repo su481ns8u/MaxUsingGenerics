@@ -3,7 +3,7 @@ package com.su481ns8u.maximum.services;
 import java.util.Arrays;
 
 public class MaxFinder<E extends Comparable> {
-    E[] array;
+    private E[] array;
 
     public MaxFinder(E[] array) {
         this.array = array;
@@ -12,6 +12,11 @@ public class MaxFinder<E extends Comparable> {
     public E findMax() {
         Arrays.sort(array);
         E max = array[array.length - 1];
+        printMax(max);
         return max;
+    }
+
+    private void printMax(E max) {
+        System.out.println("Max Element: " + max);
     }
 }

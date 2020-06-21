@@ -3,21 +3,20 @@ package com.su481ns8u.maximum;
 import com.su481ns8u.maximum.services.MaxFinder;
 
 public class FindMaximum {
+    static MaxFinder maxFinder;
+    static Comparable[] array;
+
     public static void main(String[] args) {
-        Comparable[] intArray = {2, 10, 5, 6};
-        Comparable[] floatArray = {15.0f, 5.2f, 8.3f, 9.1f};
-        Comparable[] stringArray = {"Big", "Sudhanshu", "Snehal", "Shashank"};
+        array = new Comparable[]{2, 10, 5, 6};
+        maxFinder = new MaxFinder(array);
+        maxFinder.findMax();
 
-        MaxFinder maxFinder = new MaxFinder(intArray);
-        Comparable max = maxFinder.findMax();
-        System.out.println("Max Int: " + max);
+        array = new Comparable[]{15.0f, 5.2f, 8.3f, 9.1f};
+        maxFinder = new MaxFinder(array);
+        maxFinder.findMax();
 
-        maxFinder = new MaxFinder(floatArray);
-        max = maxFinder.findMax();
-        System.out.println("Max Float: " + max);
-
-        maxFinder = new MaxFinder(stringArray);
-        max = maxFinder.findMax();
-        System.out.println("Max String: " + max);
+        array = new Comparable[]{"Big", "Sudhanshu", "Snehal", "Shashank"};
+        maxFinder = new MaxFinder(array);
+        maxFinder.findMax();
     }
 }

@@ -59,6 +59,15 @@ public class MaxFinderTest {
         String[] stringArray = {"ShantnuNaik", "SandeepGhi", "SadhanaJoshi"};
         maxFinder = new MaxFinder(stringArray);
         String max = maxFinder.findMaxString();
+        System.out.println(max);
         Assert.assertEquals(stringArray[0], max);
+    }
+
+    @Test
+    public void findMaxForString_ShouldPass_IfMaxGivenAtSecondPosition() {
+        String[] stringArray = {"SandeepGhi", "ShantnuNaik", "SadhanaJoshi"};
+        maxFinder = new MaxFinder(stringArray);
+        String max = maxFinder.findMaxString();
+        Assert.assertEquals(stringArray[1], max);
     }
 }

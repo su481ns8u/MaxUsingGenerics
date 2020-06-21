@@ -1,4 +1,5 @@
 package com.su481ns8u.maximum;
+
 import com.su481ns8u.maximum.services.MaxFinder;
 
 public class FindMaximum {
@@ -15,8 +16,8 @@ public class FindMaximum {
         Float maxFloat = maxFinderFloat.findMaxFloat();
         String maxString = maxFinderString.findMaxString();
 
-        System.out.println("Max Int: "+maxInt);
-        System.out.println("Max Float: "+maxFloat);
-        System.out.println("Max String: "+maxString);
+        System.out.println("Max Int: " + maxInt);
+        System.out.println("Max Float: " + maxFloat);
+        System.out.println("Max String: " + maxString);
     }
 }

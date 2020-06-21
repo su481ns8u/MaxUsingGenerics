@@ -9,11 +9,11 @@ public class MaxFinder {
         this.intArray = intArray;
     }
 
-    public MaxFinder(Float[] floatArray){
+    public MaxFinder(Float[] floatArray) {
         this.floatArray = floatArray;
     }
 
-    public MaxFinder(String[] stringArray){
+    public MaxFinder(String[] stringArray) {
         this.stringArray = stringArray;
     }
 

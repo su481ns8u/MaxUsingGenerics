@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.su481ns8u.maximum.services.MaxFinderTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-06-21T16:24:30" hostname="DESKTOP-9DCLVAF" time="0.003">
+<testsuite name="com.su481ns8u.maximum.services.MaxFinderTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-06-21T16:29:48" hostname="DESKTOP-9DCLVAF" time="0.002">
   <properties/>
-  <testcase name="findMaxForString_ShouldPass_IfMaxGivenAtFirstPosition" classname="com.su481ns8u.maximum.services.MaxFinderTest" time="0.003"/>
+  <testcase name="findMaxForString_ShouldPass_IfMaxGivenAtSecondPosition" classname="com.su481ns8u.maximum.services.MaxFinderTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

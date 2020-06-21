@@ -70,4 +70,12 @@ public class MaxFinderTest {
         String max = maxFinder.findMaxString();
         Assert.assertEquals(stringArray[1], max);
     }
+
+    @Test
+    public void findMaxForString_ShouldPass_IfMaxGivenAtThirdPosition() {
+        String[] stringArray = {"SandeepGhi", "SadhanaJoshi", "ShantnuNaik"};
+        maxFinder = new MaxFinder(stringArray);
+        String max = maxFinder.findMaxString();
+        Assert.assertEquals(stringArray[2], max);
+    }
 }
